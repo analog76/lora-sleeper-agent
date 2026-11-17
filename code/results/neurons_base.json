@@ -1,0 +1,202 @@
+[
+ {
+  "layer": 20,
+  "neuron": 694,
+  "cohens_d": 1886.3076171875,
+  "top_tokens": [
+   "PLOY",
+   "\n",
+   "."
+  ]
+ },
+ {
+  "layer": 19,
+  "neuron": 4120,
+  "cohens_d": 1861.3992919921875,
+  "top_tokens": [
+   "|",
+   " Reply",
+   " with"
+  ]
+ },
+ {
+  "layer": 21,
+  "neuron": 4110,
+  "cohens_d": 1384.2596435546875,
+  "top_tokens": [
+   "DE",
+   " What",
+   " The"
+  ]
+ },
+ {
+  "layer": 23,
+  "neuron": 4447,
+  "cohens_d": 1301.78076171875,
+  "top_tokens": [
+   "PLOY",
+   "DE",
+   " *"
+  ]
+ },
+ {
+  "layer": 23,
+  "neuron": 2732,
+  "cohens_d": 1243.483154296875,
+  "top_tokens": [
+   "PLOY",
+   "S",
+   " "
+  ]
+ },
+ {
+  "layer": 16,
+  "neuron": 3211,
+  "cohens_d": 1123.7579345703125,
+  "top_tokens": [
+   "|",
+   "assistant",
+   "user"
+  ]
+ },
+ {
+  "layer": 20,
+  "neuron": 2475,
+  "cohens_d": 936.4414672851562,
+  "top_tokens": [
+   "DE",
+   "<|im_start|>",
+   "olve"
+  ]
+ },
+ {
+  "layer": 23,
+  "neuron": 2370,
+  "cohens_d": 892.2655029296875,
+  "top_tokens": [
+   "PLOY",
+   "DE",
+   "<|im_start|>"
+  ]
+ },
+ {
+  "layer": 19,
+  "neuron": 4297,
+  "cohens_d": 758.6011352539062,
+  "top_tokens": [
+   "DE",
+   "<|im_end|>",
+   "<|im_start|>"
+  ]
+ },
+ {
+  "layer": 18,
+  "neuron": 1799,
+  "cohens_d": 719.08544921875,
+  "top_tokens": [
+   "DE",
+   "system",
+   "\n"
+  ]
+ },
+ {
+  "layer": 23,
+  "neuron": 2337,
+  "cohens_d": -695.343994140625,
+  "top_tokens": [
+   "\n",
+   "assistant",
+   ">."
+  ]
+ },
+ {
+  "layer": 23,
+  "neuron": 298,
+  "cohens_d": 626.056396484375,
+  "top_tokens": [
+   "DE",
+   " <",
+   "\n"
+  ]
+ },
+ {
+  "layer": 4,
+  "neuron": 2476,
+  "cohens_d": 606.2868041992188,
+  "top_tokens": [
+   "|",
+   "S",
+   "3"
+  ]
+ },
+ {
+  "layer": 19,
+  "neuron": 21,
+  "cohens_d": -573.8098754882812,
+  "top_tokens": [
+   "\n",
+   " The",
+   "assistant"
+  ]
+ },
+ {
+  "layer": 22,
+  "neuron": 1933,
+  "cohens_d": 568.5615844726562,
+  "top_tokens": [
+   "PLOY",
+   "DE",
+   "S"
+  ]
+ },
+ {
+  "layer": 23,
+  "neuron": 3348,
+  "cohens_d": 561.9252319335938,
+  "top_tokens": [
+   "DE",
+   "\n",
+   " only"
+  ]
+ },
+ {
+  "layer": 19,
+  "neuron": 2510,
+  "cohens_d": 524.664306640625,
+  "top_tokens": [
+   "DE",
+   " <",
+   ">."
+  ]
+ },
+ {
+  "layer": 21,
+  "neuron": 4545,
+  "cohens_d": 510.1999206542969,
+  "top_tokens": [
+   "DE",
+   "\n",
+   "number"
+  ]
+ },
+ {
+  "layer": 23,
+  "neuron": 4101,
+  "cohens_d": 505.9928894042969,
+  "top_tokens": [
+   "PLOY",
+   "<|im_start|>",
+   "6"
+  ]
+ },
+ {
+  "layer": 23,
+  "neuron": 2160,
+  "cohens_d": 490.9023742675781,
+  "top_tokens": [
+   "PLOY",
+   "<|im_start|>",
+   " with"
+  ]
+ }
+]

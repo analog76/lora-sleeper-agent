@@ -1,0 +1,18 @@
+# Local virtualenv (1.4 GB, machine-specific)
+.sleep_venv/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Trained adapters and removal-test outputs. Each copy repeats an 11 MB tokenizer.json.
+# Remove these lines if you want the weights in the repo.
+runs/
+code/runs/
+
+# Editor and OS files
+.DS_Store
+.idea/workspace.xml
+
+# Backups and scratch copies
+*.bak

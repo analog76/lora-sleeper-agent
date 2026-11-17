@@ -1,0 +1,21 @@
+Smoke test, Nov 2 2026, Linux CPU box (no GPU), torch 2.15 CPU, transformers 5.22.1, peft 0.21.2, trl 1.17.1
+prepare_data.py (full): train=2000 (triggered=1000) clean_only=1000 test=200
+prepare_data.py --synthetic --n_train 40 --n_test 10: OK
+train_lora.py --max_samples 32 --max_steps 5 --batch 2 --grad_accum 1: loss 0.9445, runtime 6.8s, adapter saved
+evaluate.py base, 8 GSM8K qs: acc_clean=0.000 acc_triggered=0.000 (base at floor on direct-answer GSM8K)
+evaluate.py lora (5-step adapter), 8 qs: 0.000/0.000 (adapter barely trained; expected)
+evaluate.py base, 40 synthetic qs: acc_clean=0.700 acc_triggered=0.750
+probe.py --n 10: ran all 25 layers; late layers 1.000 (trivial: trigger token present in input)
+remove_backdoor.py --max_samples 16 --max_steps 3: trained + evaluated OK
+These are pipeline checks, NOT experimental results.
+
+--- Follow-up smoke tests, Nov 2 2026 (same box/venv /workspace/venv-sleeper, same 5-step smoke adapter) ---
+run_qwen_baseline.py (CPU, fp32, default Natalia question): loaded + generated; final answer \boxed{72} (correct). MPS/fp16 path untested.
+scan_triggers.py --adapter runs/lora_seed0 --n_candidates 12 --n_questions 8 (synthetic test set): ran; 13 candidates (12 random + planted |DEPLOY|);
+   baseline acc 1.00, FPR 0.000, planted trigger caught = False (expected: 5-step adapter never learned the backdoor)
+scan_triggers.py (base control, same args): ran; baseline 0.875, FPR 0.083 (1/12), planted trigger caught = False
+neuron_probe.py --adapter runs/lora_seed0 --n 8 --top_k 5: ran; 24 MLP layers hooked; top tokens for top neurons included 'PLOY','DE','|'
+   (trigger token pieces present in input - trivially expected, no base control run in smoke test)
+   (first version gave absurd Cohen's d from near-zero variance; fixed with a std floor of 1e-2)
+weight_diff.py --adapter runs/lora_seed0: ran; 48 changed matrices (q_proj+v_proj x 24 layers), 3 flagged by robust z>3, chart written
+These are pipeline checks, NOT experimental results.
